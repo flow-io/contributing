@@ -16,7 +16,7 @@ You are encouraged to use the [Yeoman](http://yeoman.io) Flow.io [generator](htt
 Before using the generator, you should create a remote repository (of the same name as your module) on [Github](https://github.com/flow-io). The generator will use the module name to generate the remote URLs included in the `package.json`. Additionally, the generator takes care of setting the remote origin for the local Git repository, so you can begin pushing code immediately after generation.
 
 
-## Factory
+## Modules
 
 The main file for every module should export a function which instantiates a new stream factory.
 
