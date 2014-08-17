@@ -20,11 +20,16 @@ Before using the generator, you should create a remote repository (of the same n
 
 The main file for every module should export a function which instantiates a new stream factory.
 
+### Factory
+
 The rationale for using a factory pattern is to ease reuse of stream configurations. For instance, a stream which calculates a rolling-average over a stream of numeric data values requires a specified `window` size. The `window` defines the number of values over which to calculate an average. For multiple data sources, you may want to calculate a rolling-average for each source. Accordingly, you would need to configure and create a separate rolling-average stream for each data source. A configurable stream factory eases this burden, especially for streams requiring multiple configuration parameters (e.g., streams calculating the Pearson product-moment correlation coefficient).
 
 For those streams not requiring configuration (e.g., streams which round numeric data values), the factory pattern is not necessary. You are, however, __strongly encouraged__ to use the factory pattern to ensure consistency across all flow modules.
 
 One __requirement__ for every stream factory is that the factory prototype must have a `stream()` method. This method should return a configured stream.
+
+
+### Setters/Getters
 
 You are encouraged to use setters/getters with type checking over initial configuration objects. Doing so eases on-the-fly configuration adjustments when dynamically creating new streams.
 
@@ -54,6 +59,8 @@ flow.stream({
 	'type': 'normalized'
 });
 ```
+
+### Type Checking
 
 Additionally, for setters, you are __strongly encouraged__ to type check input arguments. While including checks leads to longer modules and more required tests, doing so helps define user expectations and allows users to more easily debug their code.
 
