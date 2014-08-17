@@ -26,12 +26,12 @@ The rationale for using a factory pattern is to ease reuse of stream configurati
 
 For those streams not requiring configuration (e.g., streams which round numeric data values), the factory pattern is not necessary. You are, however, __strongly encouraged__ to use the factory pattern to ensure consistency across all flow modules.
 
-One __requirement__ for every stream factory is that the factory prototype must have a `stream()` method. This method should return a configured stream.
+One __requirement__ for every stream factory is that the factory must have a `stream()` method. This method should return a configured stream.
 
 
 ### Setters/Getters
 
-You are encouraged to use setters/getters with type checking over initial configuration objects. Doing so eases on-the-fly configuration adjustments when dynamically creating new streams.
+You are encouraged to use setters/getters over initial configuration objects. Doing so eases on-the-fly configuration adjustments when dynamically creating new streams.
 
 ``` javascript
 // Do:
@@ -62,7 +62,7 @@ flow.stream({
 
 ### Type Checking
 
-Additionally, for setters, you are __strongly encouraged__ to type check input arguments. While including checks leads to longer modules and more required tests, doing so helps define user expectations and allows users to more easily debug their code.
+For setters, you are __strongly encouraged__ to type check input arguments. While including checks leads to longer modules and more required tests, doing so helps define user expectations and allows users to more easily debug their code.
 
 ``` javascript
 // Do:
