@@ -1,7 +1,7 @@
 Contributing
 ============
 
-Flow.io is a collection of stream utilities for statistical processing of numeric data streams. To contribute to Flow.io, please follow the style guide provided below.
+[Flow.io](https://github.com/flow-io/flow.io) is a collection of stream utilities for statistical processing of numeric data streams. To contribute to Flow.io, please follow the style guide provided below.
 
 
 ## JavaScript
