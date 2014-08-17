@@ -85,9 +85,7 @@ Stream.prototype.window = function( window ) {
 
 All modules should instrument testing. Currently, [Mocha](http://visionmedia.github.io/mocha) is the preferred test framework with [Chai](http://chaijs.com) assertions. For code coverage, you are encouraged to use [Istanbul](https://github.com/gotwarlost/istanbul).
 
-If you use the Flow.io [generator](https://github.com/flow-io/generator-flow-io), all relevant test modules are included.
-
-Strive for 100% code coverage.
+If you use the Flow.io [generator](https://github.com/flow-io/generator-flow-io), the above test modules are included. Strive for 100% code coverage.
 
 
 ---
